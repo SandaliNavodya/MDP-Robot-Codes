@@ -1,0 +1,20 @@
+char t;
+
+void setup() {
+pinMode(13,OUTPUT);   //left motors  forward
+pinMode(12,OUTPUT);   //left motors reverse
+pinMode(11,OUTPUT);   //right  motors forward
+pinMode(10,OUTPUT);   //right motors reverse
+pinMode(9,OUTPUT);   //Led
+Serial.begin(9600);
+ 
+}
+ 
+void loop() {
+while(Serial.available()){
+  t = Serial.read();
+  Serial.println(t);
+}
+
+// delay(100);
+}
