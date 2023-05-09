@@ -1,0 +1,13 @@
+int a;
+void setup()  
+{ 
+Serial.begin(9600);  
+pinMode(6,OUTPUT);  
+} 
+void loop()  
+{  digitalWrite(6,HIGH);  
+delayMicroseconds(500);  
+a=analogRead(A3); 
+Serial.println(a);
+delay(500); 
+}
